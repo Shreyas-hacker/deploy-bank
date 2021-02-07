@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styling.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="shortcut icon" href="#">
+        <title>Check Accounts</title>
+    </head>
+    <body>
+        <h2 class="caption">Accounts You hold</h2>
+        <table>
+            <tr>
+                <th>Account Type</th>
+                <td>{{ acc_types }}</td>
+            </tr>
+            <tr>
+                <th>Account no.</th>
+                <td>{{ acc_number }}</td>
+            </tr>
+            <tr>
+                <th>Balance</th>
+                <td>{{ acc_balance }}</td>
+            </tr>
+        </table>
+        <br>
+        <button class="back"><a href="{{ url_for('home') }}">Back</a></button>
+    </body>
+</html>
