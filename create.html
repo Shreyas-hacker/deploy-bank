@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styling.css') }}">
+        <link rel="shortcut icon" href="#">
+        <title>Create Account</title>
+    </head>
+    <body>
+        <h2 class="header">Create Account</h2>
+        <form action="{{ url_for('create') }}" method="POST" class="form">
+            <label for="name">Name:</label>
+            <input name="name" type="text" placeholder="Enter name">
+            <br>
+            <label for="account type">Account Type</label>
+            <select name="account type" id="account type">
+                <option disabled selected value="0">--Choose Account type--</option>
+                <option value="Savings">Savings</option>
+                <option value="Current">Current</option>
+                <option value="Fixed Deposit">Fixed Deposit</option>
+            </select>
+            <br>
+            <br>
+            <label for="current deposit">How much money would u like to put inside:</label>
+            $<input class="current deposit" name="current deposit" type="number" placeholder="Enter deposit" required>
+            <br>
+            <br>
+            <br>
+            <button class="create">Create Account</button>
+        </form>
+    </body>
+</html>
